@@ -29,8 +29,9 @@ public class _Consumer {
 	 * T - the type of the input to the operation.
 	 */
 	private static Consumer<Customer> greetCustomerConsumer = customer -> System.out
-			.println("Hello " + customer.getCustomerName() + ", thanks for registering phone number "
-					+ customer.getCustomerPhoneNumber() + ".");
+			.println(
+					"Hello " + customer.getCustomerName() + ", thanks for registering phone number "
+							+ customer.getCustomerPhoneNumber() + ".");
 
 	/**
 	 * Represents an operation that accepts two input arguments and returns no
@@ -43,23 +44,28 @@ public class _Consumer {
 	 * 
 	 * U - the type of the second argument to the operation
 	 */
-	private static BiConsumer<Customer, Boolean> greetCustomerBiConsumer = (customer, showPhoneNumber) -> System.out
-			.println("Hello " + customer.getCustomerName() + ", thanks for registering phone number "
-					+ (showPhoneNumber ? customer.getCustomerPhoneNumber() : "***-***-****") + ".");
+	private static BiConsumer<Customer, Boolean> greetCustomerBiConsumer = (customer,
+			showPhoneNumber) -> System.out
+					.println("Hello " + customer.getCustomerName()
+							+ ", thanks for registering phone number "
+							+ (showPhoneNumber ? customer.getCustomerPhoneNumber() : "***-***-****")
+							+ ".");
 
 	/**
 	 * The non Functional equivalent of the Consumer interface.
 	 */
 	private static void greetCustomerConsumer(Customer customer) {
-		System.out.println("Hello " + customer.getCustomerName() + ", thanks for registering phone number "
-				+ customer.getCustomerPhoneNumber() + ".");
+		System.out.println(
+				"Hello " + customer.getCustomerName() + ", thanks for registering phone number "
+						+ customer.getCustomerPhoneNumber() + ".");
 	}
 
 	/**
 	 * The non Functional equivalent of the BiConsumer interface.
 	 */
 	private static void greetCustomerBiConsumer(Customer customer, boolean showPhoneNumber) {
-		System.out.println("Hello " + customer.getCustomerName() + ", thanks for registering phone number "
+		System.out.println("Hello " + customer.getCustomerName()
+				+ ", thanks for registering phone number "
 				+ (showPhoneNumber ? customer.getCustomerPhoneNumber() : "***-***-****") + ".");
 	}
 
