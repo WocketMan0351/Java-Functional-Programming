@@ -24,7 +24,7 @@ public class _Consumer {
 	 * Represents an operation that accepts a single input argument and returns no
 	 * result. Unlike most other functional interfaces, Consumer is expected to
 	 * operate via side-effects. This is a functional interface whose functional
-	 * method is accept(Object).
+	 * method is accept(Object). Consumers are a void method.
 	 * 
 	 * T - the type of the input to the operation.
 	 */
@@ -48,7 +48,7 @@ public class _Consumer {
 					+ (showPhoneNumber ? customer.getCustomerPhoneNumber() : "***-***-****") + ".");
 
 	/**
-	 * The non functional equivalent of the Consumer interface.
+	 * The non Functional equivalent of the Consumer interface.
 	 */
 	private static void greetCustomerConsumer(Customer customer) {
 		System.out.println("Hello " + customer.getCustomerName() + ", thanks for registering phone number "
@@ -56,7 +56,7 @@ public class _Consumer {
 	}
 
 	/**
-	 * The non functional equivalent of the BiConsumer interface.
+	 * The non Functional equivalent of the BiConsumer interface.
 	 */
 	private static void greetCustomerBiConsumer(Customer customer, boolean showPhoneNumber) {
 		System.out.println("Hello " + customer.getCustomerName() + ", thanks for registering phone number "

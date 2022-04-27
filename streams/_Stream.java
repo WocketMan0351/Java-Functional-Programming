@@ -3,6 +3,7 @@ package streams;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 /**
@@ -10,7 +11,7 @@ import java.util.stream.Collectors;
  * declarative manner. A stream is a sequence of elements from a source -> the
  * source being a Collection (List<Person>) in these examples.
  */
-public class Main {
+public class _Stream {
 
 	public static void main(String[] args) {
 		List<Person> people = getPeople();
@@ -86,6 +87,15 @@ public class Main {
 			peopleList.forEach(System.out::println);
 		});
 		System.out.println();
+
+		// Map
+		System.out.println("*** Map ***");
+		Set<Gender> genders = people.stream()
+				.map(person -> person.getGender())
+				.collect(Collectors.toSet());
+
+		genders.forEach(System.out::println);
+		System.out.println("Printing the set: " + genders);
 	}
 
 	private static List<Person> getPeople() {

@@ -73,14 +73,14 @@ public class _Function {
 	 */
 
 	/**
-	 * The non functional equivalent of incrementByOneFunction.
+	 * The non Functional equivalent of incrementByOneFunction.
 	 */
 	private static int incrementByOne(int number) {
 		return number + 1;
 	}
 
 	/**
-	 * The non functional equivalent of incrementBy1AndMultiplyBiFunction.
+	 * The non Functional equivalent of incrementBy1AndMultiplyBiFunction.
 	 */
 	private static int incrementBy1AndMultiplyBy10(int number, int numberToMultiplyBy) {
 		return (number + 1) * numberToMultiplyBy;
