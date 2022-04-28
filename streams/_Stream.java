@@ -22,7 +22,8 @@ public class _Stream {
 				.filter(person -> person.getGender().equals(Gender.FEMALE)) // if condition is true
 				.collect(Collectors.toList()); // we collect the results back into a list
 
-		females.forEach(System.out::println); // females.forEach(female -> System.out.println(female))
+		females.forEach(System.out::println); // females.forEach(female ->
+												// System.out.println(female))
 		System.out.println();
 
 		// Sort
@@ -48,7 +49,8 @@ public class _Stream {
 		// Any Match
 		System.out.println("*** Any Match ***");
 		boolean anyMatch = people.stream()
-				.anyMatch(person -> person.getAge() >= 18); // there is at least one Person who is 18 years old
+				.anyMatch(person -> person.getAge() >= 18); // there is at least one Person who is
+															// 18 years old
 
 		System.out.println(anyMatch);
 		System.out.println();
@@ -56,7 +58,8 @@ public class _Stream {
 		// None Match
 		System.out.println("*** None Match ***");
 		boolean noneMatch = people.stream()
-				.noneMatch(person -> person.getName().equals("Satoshi")); // there is no Person named Satoshi
+				.noneMatch(person -> person.getName().equals("Satoshi")); // there is no Person
+																			// named Satoshi
 
 		System.out.println(noneMatch);
 		System.out.println();
@@ -65,7 +68,8 @@ public class _Stream {
 		System.out.println("*** Max ***");
 		people.stream() // returns an optional because it might not find the max value
 				.max(Comparator.comparing(Person::getAge))
-				.ifPresent(System.out::println); // if a value is present, it will print the (non null) optional
+				.ifPresent(System.out::println); // if a value is present, it will print the (non
+													// null) optional
 
 		System.out.println();
 
@@ -73,7 +77,8 @@ public class _Stream {
 		System.out.println("*** Min ***");
 		people.stream()
 				.min(Comparator.comparing(Person::getAge))
-				.ifPresent(System.out::println); // if a value is present, it will print the (non null) optional
+				.ifPresent(System.out::println); // if a value is present, it will print the (non
+													// null) optional
 
 		System.out.println();
 
